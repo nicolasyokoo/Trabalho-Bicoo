@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --cor-primaria: #FFFFFF; 
+    --cor-segundaria: #FC7505;
+    --cor-tercearia: #FE9309;
+}
+/* CSS página index */
+.cor{
+    background-color: var(--cor-primaria);
+}
+.topo{
+    background-color: var(--cor-tercearia);
+    color: var(--cor-primaria);
+}
+.cabecalho{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 30px 40px;
+    position: relative;
+}
+.botao-login{
+    background-color: var(--cor-segundaria);
+    color: var(--cor-primaria);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin-left: auto;
+    cursor: pointer;
+}
+.card-login{
+    position: absolute;
+    top: 100%;          
+    right: 0;
+    background-color: white;
+    padding: 15px;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    display: none;     
+    z-index: 999; 
+}
+.card-login.ativo{
+    display: block;
+}
+.card-login p{
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.btn-login-opcao{
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    background: var(--cor-segundaria);
+    color: var(--cor-primaria);
+    text-decoration: none;
+    border-radius: 8px;
+    text-align: center;
+    transition: 0.3s;
+}
+.btn-login-opcao:hover{
+    background: var(--cor-tercearia);
+    transform: scale(1.03);
+}
+.container-index-img1{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.texto-indexImg1{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    background-color: var(--cor-primaria);
+    padding: 25px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    font-family: 'Times New Roman', serif;
+}
+.indexCard1{
+    color: var(--cor-segundaria);
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px){
+    .cabecalho{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .botao-login{
+        margin-left: 0;
+    }
+    .container-index-img1 img{
+        height: 250px;
+        object-fit: cover;
+    }
+    .texto-indexImg1{
+        position: static;
+        transform: none;
+        margin: 20px auto;
+        width: 90%;
+    }
+}
+@media (max-width: 480px){
+    .texto-indexImg1{
+        padding: 15px;
+    }
+    .texto-indexImg1 h1{
+        font-size: 18px;
+    }
+    .texto-indexImg1 h2{
+        font-size: 14px;
+    }
+}
+
+
+/* CSS página --  */
+
+/* CSS das telas de cadastro --*/
+
+/* CSS páginas de cadastro */
+
+.container-formulario{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.card-formulario{
+    background-color: var(--cor-primaria);
+    width: 90%;
+    max-width: 450px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.card-formulario h1{
+    color: var(--cor-segundaria);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.card-formulario form{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.card-formulario label{
+    font-weight: bold;
+}
+
+.card-formulario input,
+.card-formulario textarea{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.card-formulario textarea{
+    height: 100px;
+}
+
+.card-formulario button{
+    background-color: var(--cor-segundaria);
+    color: var(--cor-primaria);
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.card-formulario button:hover{
+    background-color: var(--cor-tercearia);
+}
+
+/* CSS rodapé */
+
+.rodape{
+    background-color: var(--cor-tercearia);
+    color: var(--cor-primaria);
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.rodape p{
+    font-weight: bold;
+}
+
+/* CSS quem somos */
+
+.texto-quem-somos{
+    width: 90%;
+    max-width: 800px;
+    background-color: var(--cor-primaria);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.texto-quem-somos h1{
+    color: var(--cor-segundaria);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.texto-quem-somos p{
+    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Responsivo */
+
+@media (max-width: 768px){
+    .container-formulario{
+        padding: 30px 0;
+    }
+
+    .card-formulario{
+        width: 85%;
+        padding: 20px;
+    }
+
+    .rodape{
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+}
